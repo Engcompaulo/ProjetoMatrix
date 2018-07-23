@@ -1,29 +1,28 @@
-var l = console.log; //para dar mais agilidade na escrita e deixar o código mais limpo.
-function somarImpares(n){//Soma dos números inteiros ímpares   
-        if(validador(n)){
+﻿var l = console.log;
 
-            if(n === 0 || n === 1){
-                return l(n);
-            }else{
-                    var cont =0;
-                    var resultado = 0;
-                    for(var i = 1; i<= n;i++){
-                         if(i%2 !== 0){
-                             resultado = resultado +i;
-                             cont++; 
-                         }else{
-                             n = n+1;
-                         }
-                    }
-                    return l(resultado);
-                 }
-        }
-        else{
-        l("undefined");
-        }
+function validador(n){ 
+        return typeof n =="number";
     }
-    function validador(n){ //validar a entrada.
-        if(typeof n ==="number") return  true;
-        else return false;
-    }
-somarImpares(100);
+
+function somarImpares(n){        
+	if(validador(n)){
+          return  operacao(n);
+        }
+}
+
+function operacao(n){
+        var cont =0;
+        var saida = 0;
+        var somarimpares=0;
+               do{
+               cont++;
+                   if (cont%2 !==0 && n !== 0){
+                   	somarimpares = somarimpares + cont;
+                        saida++;
+                   }
+               }while (saida < n);
+          return  somarimpares;
+
+}
+  
+l(somarImpares(3));

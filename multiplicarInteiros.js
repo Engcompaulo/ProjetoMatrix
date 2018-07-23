@@ -1,23 +1,24 @@
-function multiplicarInteiros(n){//Multiplicar os números inteiros
-        if(validador(n)){
-            var mult = 1;
+﻿function multiplicarInteiros(n){//Multiplicar os números inteiros
+        
+		if(typeof n ==="number"){
+             return operacao(n);
+          
+            }
+
+}
+
+function operacao(n){
+    var multiplicarinteiros = 1;
                 if(n === 0 || n===1){
                     return 1;
                 }else{
                     for(var i = 2;i<=n ;){
-                        mult = mult*i;
+                       multiplicarinteiros = multiplicarinteiros*i;
                         i++;
                         }      
-                return mult;
+                return multiplicarinteiros;
                 }
-            }else{
-            l("undefined");    
-            }
+  
+}
 
-    }
-   
-    function validador(n){ //validar a entrada.
-        if(typeof n ==="number") return  true;
-        else return false;
-    }
 console.log(multiplicarInteiros(5));

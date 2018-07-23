@@ -1,15 +1,15 @@
-function somarInteiros(n){ //Soma dos números inteiros
-     var soma = 0;
+﻿
+function validador(n){ 
+     return typeof n ==="number"
+}
+
+function somarInteiros(n){
+  
         if(validador(n)){
-            return soma=(n*(n+1))/2; 
-        }else{
-           return "undefined";
+            return (n*(n+1))/2; 
         }
              
 }
-function validador(n){ //validar a entrada.
-     if(typeof n ==="number") return  true;
-     else return false;
-}
 
-console.log(somarInteiros(100));
+
+console.log(somarInteiros(100000));
